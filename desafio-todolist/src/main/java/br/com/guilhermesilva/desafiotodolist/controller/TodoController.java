@@ -15,21 +15,21 @@ public class TodoController {
         this.service = service;
     }
 
-    @PostMapping
+    @PostMapping("/create")
     public List<Todo> create(@RequestBody Todo todo){
         return service.create(todo);
     }
 
-    @GetMapping
+    @GetMapping("/list")
     public List<Todo> list(){
         return service.list();
     }
 
-    @PutMapping
+    @PutMapping("/update")
     public List<Todo> updtate(@RequestBody  Todo todo){
         return service.update(todo);
     }
-    @DeleteMapping("{id}")
+    @DeleteMapping("/{id}")
     public List<Todo> delete(@PathVariable("id") Long id){
         return service.delete(id);
     }
