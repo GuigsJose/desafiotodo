@@ -74,7 +74,7 @@ $ http GET :8080/todos/list
   },
 ]
 ```
-```
+
 ``` bash
 $ http PUT :8080/todos/update id=1 nome="Novo Nome" descricao="Nova Descrição" prioridade=2
 ````
